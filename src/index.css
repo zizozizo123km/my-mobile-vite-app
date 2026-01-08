@@ -1,0 +1,123 @@
+/*
+ * Global Styles and CSS Reset
+ * Designed for high contrast, readability, and compatibility across browsers and Termux environments.
+ */
+
+/* 1. Box Model Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Root Variables (Theming) */
+:root {
+  /* Colors (High Contrast Terminal Theme) */
+  --color-background: #1e1e1e; /* Dark background */
+  --color-text: #f0f0f0;       /* Light text */
+  --color-primary: #00ff00;    /* Bright Green (Accent/Success) */
+  --color-secondary: #00aaff;  /* Bright Blue (Links/Interactive) */
+  --color-border: #444444;     /* Subtle border color */
+
+  /* Fonts (Prioritizing Monospace for Termux feel) */
+  --font-family-mono: 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  --font-family-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  --font-size-base: 16px;
+}
+
+/* 3. HTML and Body Base Styles */
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-mono);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-sans);
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* 5. Links and Accessibility */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* High visibility focus state for accessibility */
+:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* 6. Form Elements */
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6em 1em;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--color-primary);
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-background); /* Ensure text is dark on bright button */
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* 7. Utility */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure main content is centered and padded */
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
