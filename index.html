@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق الويب المتقدم</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196F3">
+</head>
+<body>
+    <header>
+        <h1>تطبيق الويب المتقدم</h1>
+        <button id="installButton" style="display:none;">تثبيت التطبيق</button>
+    </header>
+
+    <main>
+        <section id="status">
+            <h2>حالة النظام</h2>
+            <p id="networkStatus">الاتصال: متصل</p>
+            <p id="storageStatus">التخزين المحلي: جاهز</p>
+        </section>
+
+        <section id="data-input">
+            <h2>إدخال البيانات</h2>
+            <form id="dataForm">
+                <input type="text" id="dataInput" placeholder="أدخل نصًا هنا" required>
+                <button type="submit">حفظ محليًا</button>
+            </form>
+            <button id="syncButton">مزامنة البيانات (تجريبي)</button>
+        </section>
+
+        <section id="data-output">
+            <h2>البيانات المحفوظة</h2>
+            <ul id="dataList">
+                <!-- البيانات المحفوظة ستظهر هنا -->
+            </ul>
+        </section>
+
+        <section id="termux-info" style="display:none;">
+            <h2>معلومات Termux</h2>
+            <p>هذا التطبيق مصمم للعمل بكفاءة في بيئة Termux.</p>
+            <button id="termuxTestButton">اختبار وظيفة Termux (تجريبي)</button>
+            <pre id="termuxOutput"></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 تطبيق الويب المتقدم. يعمل بسلاسة على المتصفح و Termux.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
