@@ -1,0 +1,76 @@
+# Dependencies
+/node_modules
+/vendor
+
+# Build output
+/dist
+/build
+/out
+/coverage
+
+# Logs and temporary files
+/logs
+/tmp
+/temp
+*.log
+*.tmp
+*.swp
+*.bak
+*.swo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+/nbproject/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Termux specific (if applicable, though usually handled by standard ignores)
+# Termux often uses standard Linux paths, but if specific build artifacts are created:
+# (Assuming standard Node.js/Web development setup)
+
+# Node.js specific
+npm-debug.log*
+yarn-error.log*
+/pids
+/lib-cov
+/test-cov
+
+# Composer (PHP, if used for backend/tooling)
+/vendor/
+composer.lock
+
+# Python (if used for tooling/backend)
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Docker
+/target
+!/target/.gitkeep
+.dockerignore
+
+# Security/Credentials (ensure these are not committed)
+*.key
+*.pem
+*.crt
+*.p12
+*.jks
+/secrets/
+/credentials/
+
+# Custom application specific (adjust as needed)
+/uploads/
+/storage/
+/cache/
