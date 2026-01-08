@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* Use currentColor so the logo inherits the text color defined by CSS */
+    .logo-fill { fill: currentColor; }
+  </style>
+  <g class="logo-fill">
+    <!-- Left Chevron (Represents execution or code start) -->
+    <polygon points="25,50 50,25 50,75" />
+    <!-- Right Chevron (Represents speed and advancement) -->
+    <polygon points="55,50 80,25 80,75" />
+  </g>
+</svg>
